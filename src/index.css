@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@keyframes screenShake {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  12% { transform: translate(-8px, 6px) rotate(-1.2deg); }
+  24% { transform: translate(8px, -6px) rotate(1.2deg); }
+  36% { transform: translate(-6px, -4px) rotate(-0.8deg); }
+  48% { transform: translate(6px, 4px) rotate(0.8deg); }
+  60% { transform: translate(-4px, 3px) rotate(-0.4deg); }
+  72% { transform: translate(4px, -3px) rotate(0.4deg); }
+  84% { transform: translate(-2px, 1px) rotate(0deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.animate-screen-shake {
+  animation: screenShake 0.45s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+/* Procedural Snake Scaly Skin Shader Animations */
+@keyframes scaleSlitherActive {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -120px; }
+}
+
+@keyframes scaleSlitherIdle {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -30px; }
+}
+
+@keyframes scaleSheen {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.95;
+  }
+}
+
+.animate-scale-slither-active {
+  animation: scaleSlitherActive 1s linear infinite;
+}
+
+.animate-scale-slither-idle {
+  animation: scaleSlitherIdle 5s linear infinite;
+}
+
+.animate-scale-sheen {
+  animation: scaleSheen 2.5s ease-in-out infinite;
+}
+
+/* Periodic Idle Fire-Breathing for Snake Heads */
+@keyframes idleFireBreath {
+  0%, 65%, 100% {
+    transform: scale(0) translateX(0);
+    opacity: 0;
+  }
+  72% {
+    transform: scale(0.6) translateX(-4px);
+    opacity: 0.7;
+  }
+  78% {
+    transform: scale(1.3) translateX(-14px);
+    opacity: 1;
+    filter: drop-shadow(0 0 8px rgba(249, 115, 22, 0.9));
+  }
+  85% {
+    transform: scale(1.1) translateX(-20px);
+    opacity: 0.75;
+    filter: drop-shadow(0 0 12px rgba(239, 68, 68, 0.8));
+  }
+  92% {
+    transform: scale(0.7) translateX(-26px);
+    opacity: 0.2;
+  }
+}
+
+@keyframes snakeEyeFlare {
+  0%, 65%, 100% {
+    filter: drop-shadow(0 0 2px rgba(239, 68, 68, 0.5));
+    transform: scale(1);
+  }
+  78% {
+    filter: drop-shadow(0 0 8px rgba(245, 158, 11, 1));
+    transform: scale(1.25);
+  }
+}
+
+.animate-idle-fire-breath {
+  animation: idleFireBreath 4.2s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+}
+
+.animate-snake-eye-flare {
+  animation: snakeEyeFlare 4.2s ease-in-out infinite;
+}

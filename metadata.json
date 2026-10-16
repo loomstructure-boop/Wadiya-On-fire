@@ -1,0 +1,6 @@
+{
+  "name": "Wadiya on Fire",
+  "description": "Fast-paced fiery Snake Ludo featuring fire-breathing cyber cobras, animated human runners, comical snake swallow & poop slide mechanics, and Bengali voice lines.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
